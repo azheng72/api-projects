@@ -14,6 +14,6 @@ app.get('/:date',function(req,res){
     res.json(result);
     res.end();
 });
-app.listen(8080,function(){
-    console.log("listen to port : 8080");
+app.listen(process.env.PORT ||8080,function(){
+    console.log("listen to port : process.env.PORT ||8080");
 });
