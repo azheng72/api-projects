@@ -12,6 +12,7 @@ app.get('/:date',function(req,res){
         var result = {  unix:Math.round(date.getTime()/1000),natural:date.toLocaleDateString('en-US', options)};
     }
     res.json(result);
+    res.end();
 });
 app.listen(8080,function(){
     console.log("listen to port : 8080");
